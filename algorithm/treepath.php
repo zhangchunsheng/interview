@@ -31,8 +31,6 @@ function CreateBiTNode(&$node) {
     $k = 0;
     $j = 0;
     $a = 0;
-    $ch0 = "";
-    $ch = "";
     $str = array();
     $node = NULL;
 
@@ -94,7 +92,6 @@ function DispBiTNode($node) {
 }
 
 function Path($node, $path, $pathlen) {
-    $i = 0;
     if($node != NULL) {
         if($node->lchild == NULL && $node->rchild == NULL) {
             printf("%s到根结点路径:%s", $node->data, $node->data);
@@ -106,7 +103,6 @@ function Path($node, $path, $pathlen) {
             $pathlen++;
             Path($node->lchild, $path, $pathlen);
             Path($node->rchild, $path, $pathlen);
-            $pathlen--;
         }
     }
 }
