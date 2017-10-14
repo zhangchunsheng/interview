@@ -26,7 +26,7 @@ main();
 //创建二叉树 A(B,C(D,E))#
 function CreateBiTNode($node) {
     $St = array();
-    $p = NULL;
+    $p = new Node();
     $top = -1;
     $k = 0;
     $j = 0;
