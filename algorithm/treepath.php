@@ -24,7 +24,7 @@ function main() {
 main();
 
 //创建二叉树 A(B,C(D,E))#
-function CreateBiTNode($node) {
+function CreateBiTNode(&$node) {
     $St = array();
     $p = new Node();
     $top = -1;
@@ -38,7 +38,8 @@ function CreateBiTNode($node) {
 
     printf("请输入一个格式为A(B,C)的二叉树：\n以#结束\n");
     $ch0 = fgetc(STDIN);
-    for($a = 0; $ch0 != '#' ; $a++) {
+    $str[$a] = $ch0;
+    for($a = 1; $ch0 != '#' ; $a++) {
         $ch0 = fgetc(STDIN);
         $str[$a] = $ch0;
     }
@@ -80,7 +81,7 @@ function CreateBiTNode($node) {
 
 function DispBiTNode($node) {
     if($node != NULL)  {
-        printf("%c", $node->data);
+        printf("%s", $node->data);
         if($node->lchild != NULL || $node->rchild != NULL) {
             printf("(");
             DispBiTNode($node->lchild);
@@ -96,9 +97,9 @@ function Path($node, $path, $pathlen) {
     $i = 0;
     if($node != NULL) {
         if($node->lchild == NULL && $node->rchild == NULL) {
-            printf("%c到根结点路径:%c", $node->data, $node->data);
+            printf("%s到根结点路径:%s", $node->data, $node->data);
             for($i = $pathlen - 1 ; $i >= 0 ; $i--)
-                printf("%c", $path[$i]);
+                printf("%s", $path[$i]);
             printf("\n");
         } else {
             $path[$pathlen] = $node->data;
