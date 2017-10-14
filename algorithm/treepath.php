@@ -42,7 +42,6 @@ function CreateBiTNode($node) {
         $ch0 = fgetc(STDIN);
         $str[$a] = $ch0;
     }
-    print_r($str);
     $ch = $str[$j];
     while($ch != '#') {
         switch($ch)    {
