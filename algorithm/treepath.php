@@ -39,9 +39,10 @@ function CreateBiTNode($node) {
     printf("请输入一个格式为A(B,C)的二叉树：\n以#结束\n");
     $ch0 = fgetc(STDIN);
     for($a = 0; $ch0 != '#' ; $a++) {
-        $str[$a] = $ch0;
         $ch0 = fgetc(STDIN);
+        $str[$a] = $ch0;
     }
+    print_r($str);
     $ch = $str[$j];
     while($ch != '#') {
         switch($ch)    {
