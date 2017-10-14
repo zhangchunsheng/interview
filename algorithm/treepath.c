@@ -9,11 +9,11 @@ typedef struct node {
     struct node *rchild;
 } BiTNode;
 
-void CreateBiTNode(BiTNode *&b);
+void CreateBiTNode(BiTNode *b);
 void DispBiTNode(BiTNode *b);
 void Path(BiTNode *b, ElemType path[], int pathlen);
 
-void main() {
+int main() {
     BiTNode *b;
     ElemType path[MaxSize];
     int i = 0;
@@ -24,10 +24,12 @@ void main() {
     printf("\n");
 
     Path(b, path, 0);
+
+    return 0;
 }
 
 //创建二叉树 A(B,C(D,E))#
-void CreateBiTNode(BiTNode *&b) {
+void CreateBiTNode(BiTNode *b) {
     BiTNode *St[MaxSize], *p = NULL;
     int top = -1, k, j = 0, a;
     char ch0, ch;
