@@ -11,7 +11,6 @@ function main() {
     $node = new Node();
 
     $path = array();
-    $i = 0;
     CreateBiTNode($node);
     printf("二叉树b:");
 
