@@ -1,11 +1,9 @@
 <?php
 function matmul1($a, $b) {
     $c = array();
-    for($i = 0 ; $i < count($a) ; $i++) {
-        $c[$i] = array();
-    }
 
     for($i = 0 ; $i < count($a) ; $i++) {
+        $c[$i] = array();
         for($k = 0 ; $k < count($a[0]) ; $k++) {
             if($a[$i][$k] != 0) {
                 for($j = 0 ; $j < count($b[0]) ; $j++) {
@@ -28,8 +26,6 @@ function matmul2($a, $b) {
     $d = array();
     for($i = 0 ; $i < count($a) ; $i++) {
         $c[$i] = array();
-    }
-    for($i = 0 ; $i < count($a) ; $i++) {
         $d[$i] = array();
         for($k = 0 ; $k < count($a[0]) ; $k++) {
             if($a[$i][$k] != 0) {
