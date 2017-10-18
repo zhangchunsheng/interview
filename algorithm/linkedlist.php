@@ -55,14 +55,16 @@ function mergeLinkedList($a, $b) {
     $i = 0;
     while($a && $b) {
         if($a->value <= $b->value) {
-            $c[$i] = $a->value;
+            $c[$i] = new LinkedList();
+            $c[$i]->value = $a->value;
             if($a->next) {
                 $a = $a->next;
             } else {
                 $a = null;
             }
         } else {
-            $c[$i] = $b->value;
+            $c[$i] = new LinkedList();
+            $c[$i]->value = $b->value;
             if($b->next) {
                 $b = $b->next;
             } else {
@@ -72,7 +74,8 @@ function mergeLinkedList($a, $b) {
         $i++;
     }
     while($a) {
-        $c[$i] = $a->value;
+        $c[$i] = new LinkedList();
+        $c[$i]->value = $a->value;
         $i++;
         if($a->next) {
             $a = $a->next;
@@ -81,7 +84,8 @@ function mergeLinkedList($a, $b) {
         }
     }
     while($b) {
-        $c[$i] = $b->value;
+        $c[$i] = new LinkedList();
+        $c[$i]->value = $b->value;
         $i++;
         if($b->next) {
             $b = $b->next;
@@ -90,10 +94,14 @@ function mergeLinkedList($a, $b) {
         }
     }
 
-    return $c;
+    for($j = 0 ; $j < count($c) - 1 ; $j++) {
+        $c[$j]->next = $c[$j + 1];
+    }
+
+    return $c[0];
 }
 
 printLinkedList($a);
 printLinkedList($f);
 
-print_r(mergeLinkedList($a, $f));
+printLinkedList(mergeLinkedList($a, $f));
