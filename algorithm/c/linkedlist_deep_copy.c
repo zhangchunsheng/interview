@@ -5,6 +5,7 @@ struct Node
     Node* next;
     Node* sibling;
 };
+
 void Clone(Node* head)
 {
     Node* current=head;
@@ -18,7 +19,6 @@ void Clone(Node* head)
         current=temp->next;
     }
 }
-
 
 void ConstructSibling(Node* head)
 {
@@ -54,7 +54,6 @@ Node* Split(Node* head)
     }
     return CloneHead;
 }
-
 
 //the whole thing
 Clone(head);
