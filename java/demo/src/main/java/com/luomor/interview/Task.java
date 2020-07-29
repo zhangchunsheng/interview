@@ -41,6 +41,10 @@ import java.util.Scanner;
  * 分配之后的任务信息：
  * taskIndex: 0 taskTime: 6 taskNumber: 4 hasWashed: 0
  * taskIndex: 1 taskTime: 10 taskNumber: 2 hasWashed: 0
+ *
+ * 6 2 1 2
+ * 6 2 1 2
+ * 6 10
  */
 public class Task {
     public static void main(String[] args) {
@@ -147,9 +151,7 @@ public class Task {
                     washAllFinishTime = earlistTime + y;
                 }
             }
-
         }
-
     }
 
     static class MinHeap {
