@@ -92,7 +92,6 @@ public class Task {
                 System.out.println();
             }
         }
-
     }
 
     /**
@@ -200,7 +199,6 @@ public class Task {
                 doHeapify(data, minIndex);
             }
         }
-
     }
 
     static class taskInfo implements Comparable<taskInfo> {
