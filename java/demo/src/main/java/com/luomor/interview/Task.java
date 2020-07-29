@@ -38,6 +38,9 @@ import java.util.Scanner;
  * 6 2 0 0
  * 6 2 0 0
  * 6 10
+ * 分配之后的任务信息：
+ * taskIndex: 0 taskTime: 6 taskNumber: 4 hasWashed: 0
+ * taskIndex: 1 taskTime: 10 taskNumber: 2 hasWashed: 0
  */
 public class Task {
     public static void main(String[] args) {
