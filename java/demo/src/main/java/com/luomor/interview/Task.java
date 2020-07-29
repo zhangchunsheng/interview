@@ -36,6 +36,7 @@ import java.util.Scanner;
  * 第二行输入m个数字，分别表示每台咖啡机煮一杯咖啡所需的时间
  *
  * 6 2 0 0
+ * 6 2 0 0
  * 6 10
  */
 public class Task {
