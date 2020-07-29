@@ -13,6 +13,7 @@
  * 求N个任务,M台机器执行完的最短时间的调度设计?
  *
  * https://www.jianshu.com/p/e38a839a30b0 最小堆
+ * 输入为m台服务器，每台机器处理一个任务的时间为t[i]，完成n个任务，输出n个任务在m台服务器的分布
  */
 class Task {
     public static function minTask(array $taskMachine, int $machineNum) {
