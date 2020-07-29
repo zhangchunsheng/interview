@@ -34,6 +34,9 @@ import java.util.Scanner;
  *
  * 第一行输入n, m, x, y，表示n个人，m台咖啡机，洗一个杯子的时间，咖啡自然挥发的时间
  * 第二行输入m个数字，分别表示每台咖啡机煮一杯咖啡所需的时间
+ *
+ * 6 2 0 0
+ * 6 10
  */
 public class Task {
     public static void main(String[] args) {
