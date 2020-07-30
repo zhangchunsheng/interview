@@ -93,3 +93,4 @@ $len = count($arr);
 for ($i = floor($len / 2); $i >= 1; $i--) {
     $arr = heapify($arr, $i);
 }
+print_r($arr);
