@@ -1,5 +1,9 @@
 package com.luomor.demo.hashmap;
 
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+
 /**
  * Created by PeterZhang on 2017/10/29.
  */
@@ -91,6 +95,29 @@ public class HashMap<K,V> implements Map<K,V> {
         public V getValue() {
             return v;
         }
+    }
+
+    public void testHashSet() {
+        java.util.Map<String, String> map = new java.util.HashMap();
+
+        Set set = new HashSet();
+        set.add("1");//map.put(e, PRESENT)==null;
+
+        java.util.Map linked = new LinkedHashMap();
+        linked.put("1", "1");
+        linked.get("1");
+
+        Set tree = new TreeSet();
+        tree.add("1");
+
+        java.util.Map table = new Hashtable();
+        java.util.Map concurrent = new ConcurrentHashMap();
+
+        List list = new ArrayList();
+        List linkedList = new LinkedList();
+        List vector = new Vector();
+
+        System.out.println(AbstractQueuedSynchronizer.class);
     }
 
 }
